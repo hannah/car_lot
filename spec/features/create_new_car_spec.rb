@@ -19,7 +19,6 @@ Upon successfully creating a car, I am redirected so that I can create another c
   scenario 'a valid new car is input' do
     car = FactoryGirl.build(:car)
     visit new_car_path
-    fill_in 'Make', with: car.make
     fill_in 'Model', with: car.model
     fill_in 'Color', with: car.color
     select car.year, from: 'Year'
@@ -29,10 +28,10 @@ Upon successfully creating a car, I am redirected so that I can create another c
     expect(page).to have_content('Car is successfully saved')
   end
 
-  # scenario 'an invalid car is input' do
-  #   visit new_car_path
-  #   click_on 'Create Car'
+  scenario 'an invalid car is input' do
+    visit new_car_path
+    click_on 'Create Car'
 
-  #   expect(page).to have_content("can't be blank")
-  # end
+    expect(page).to have_content("can't be blank")
+  end
 end
