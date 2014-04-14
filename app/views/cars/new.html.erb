@@ -1,5 +1,5 @@
 <%= simple_form_for @car do |f| %>
-  <%= f.input :make %>
+  <%= f.association :manufacturer, label_method: :name%>
   <%= f.input :model %>
   <%= f.input :color %>
   <%= f.input :year, collection: Car::YEARS %>

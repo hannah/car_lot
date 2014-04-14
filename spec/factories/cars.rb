@@ -1,6 +1,6 @@
 FactoryGirl.define do
   factory :car do
-    make 'Volkswagen'
+    manufacturer
     model 'Beetle'
     color 'red'
     year '1991'

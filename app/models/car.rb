@@ -5,8 +5,9 @@ class Car < ActiveRecord::Base
              2010 2011 2012 2013 2014 2015 2016 2017 2018 2019
             )
   validates :model, presence: true
-  validates :make, presence: true
   validates :color, presence: true
   validates :year, presence: true, inclusion: {in: YEARS}
   validates :mileage, presence: true
+
+  belongs_to :manufacturer
 end

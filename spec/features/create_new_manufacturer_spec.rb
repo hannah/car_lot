@@ -22,4 +22,10 @@ If I specify the required information, the manufacturer is recorded and I am red
     click_on 'Create Manufacturer'
     expect(page).to have_content('Manufacturer is successfully saved')
   end
+
+  scenario 'a new invalid manufacturer is input' do
+    visit new_manufacturer_path
+    click_on 'Create Manufacturer'
+    expect(page).to have_content("can't be blank")
+  end
 end
