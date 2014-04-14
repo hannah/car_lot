@@ -1,28 +1,10 @@
-== README
+Systems Check Week 8 at Launch Academy
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Simple website that focuses on associations and database structures.
 
-Things you may want to cover:
+Notes for the future & review:
 
-* Ruby version
+I've included future years so that this website will not be outdated the instant that new used cars come into rotation. This would be better suited to pull from current date library, but for now just I've just manually included future dates.
 
-* System dependencies
+This website doesn't actually check if countries exist, so that would be a good thing to change in the future.
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
