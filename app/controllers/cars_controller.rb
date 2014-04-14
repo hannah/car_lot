@@ -6,7 +6,7 @@ class CarsController < ApplicationController
   def create
     @car = Car.new(car_params)
     if @car.save
-      redirect_to new_car_path, notice: 'Building is successfully saved'
+      redirect_to new_car_path, notice: 'Car is successfully saved'
     else
       render 'new'
     end

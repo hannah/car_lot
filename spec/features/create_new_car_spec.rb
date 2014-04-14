@@ -26,7 +26,7 @@ Upon successfully creating a car, I am redirected so that I can create another c
     fill_in 'Mileage', with: car.mileage
 
     click_on 'Create Car'
-    expect(page).to have_content('Building is successfully saved')
+    expect(page).to have_content('Car is successfully saved')
   end
 
   # scenario 'an invalid car is input' do
