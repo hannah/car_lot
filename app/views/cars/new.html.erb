@@ -2,7 +2,7 @@
   <%= f.association :manufacturer, label_method: :name%>
   <%= f.input :model %>
   <%= f.input :color %>
-  <%= f.input :year, collection: Car::YEARS %>
+  <%= f.input :year, collection: 1980..2019 %>
   <%= f.input :mileage %>
   <%= f.input :description %>
 

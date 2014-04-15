@@ -28,6 +28,22 @@ Upon successfully creating a car, I am redirected so that I can create another c
     expect(page).to have_content('Car is successfully saved')
   end
 
+  scenario 'manufacturer is selected for a car' do
+    manufacturer = FactoryGirl.create(:manufacturer)
+    car = FactoryGirl.build(:car, manufacturer: nil)
+
+    visit new_car_path
+    select manufacturer.name, from: 'Manufacturer'
+    fill_in 'Model', with: car.model
+    fill_in 'Color', with: car.color
+    select car.year, from: 'Year'
+    fill_in 'Mileage', with: car.mileage
+    click_on 'Create Car'
+
+    expect(Car.first.manufacturer).to eq manufacturer
+    expect(page).to have_content('Car is successfully saved')
+  end
+
   scenario 'an invalid car is input' do
     visit new_car_path
     click_on 'Create Car'
